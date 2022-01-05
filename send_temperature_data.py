@@ -17,8 +17,8 @@ humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
 url = f"http://ec2-52-14-86-74.us-east-2.compute.amazonaws.com:8080/api/buildings/{building_name}/floors/{floor}/sensor-data"
 
 data = {
-    "humidity": humidity,
-    "temperature": temperature,
+    "humidity": int(humidity),
+    "temperature": int(temperature),
     "device" : device_id
 }
 response = requests.post(url, data=data)
