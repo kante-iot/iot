@@ -33,6 +33,6 @@ logging.basicConfig(
 )
 
 if response.status_code == 200:
-    logging.info(f"SUCCESS, humidity : {humidity}, temperature : {temperature}")
+    logging.info(f" SUCCESS, humidity : {humidity}, temperature : {temperature}")
 else:
-    logging.info(f"FAIL, humidity : {humidity}, temperature : {temperature}")
+    logging.info(f" FAIL, humidity : {humidity}, temperature : {temperature}")
