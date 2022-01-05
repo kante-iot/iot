@@ -27,7 +27,9 @@ response = requests.post(url, data=data)
 d = datetime.datetime.now()
 logging.basicConfig(
     filename=f"{d.year}-{d.month}-{d.day}.log",
-    level= logging.INFO
+    level= logging.INFO,
+    format='%(asctime)s:%(message)s',
+    datefmt='%m/%d/%Y %I:%M:%S %p',
 )
 
 if response.status_code == 200:
