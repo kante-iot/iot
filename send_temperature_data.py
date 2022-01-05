@@ -14,7 +14,7 @@ pin = 2
 humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
 
 # TODO : 서버 구축되면 변경
-url = f"http://ec2-52-14-86-74.us-east-2.compute.amazonaws.com:8080/api/buildings/{building_name}/floors/{floor}/sensor-data"
+url = f"http://ec2-52-14-86-74.us-east-2.compute.amazonaws.com:8080/api/sensor-data"
 
 data = {
     "humidity": int(humidity),
